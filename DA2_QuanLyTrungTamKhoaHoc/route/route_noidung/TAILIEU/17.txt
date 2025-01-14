@@ -1,0 +1,115 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const addForm = document.getElementById("addForm");
+
+    // Xử lý khi nhấn nút THÊM
+    document.querySelectorAll(".btn-them").forEach(btn => {
+        btn.addEventListener("click", function () {
+            openForm(this, "add"); // Gọi hàm mở form với chế độ 'add' (THÊM)
+        });
+    });
+
+    // Xử lý khi nhấn nút SỬA
+    document.querySelectorAll(".btn-sua").forEach(btn => {
+        btn.addEventListener("click", function () {
+            openForm(this, "edit"); // Gọi hàm mở form với chế độ 'edit' (SỬA)
+        });
+    });
+
+    function openForm(button, mode) {
+        const tabId = button.closest(".tab-pane").id;
+        addForm.innerHTML = ''; // Xóa nội dung form trước đó
+
+        let data = {}; // Đối tượng lưu trữ dữ liệu cho chế độ 'edit'
+
+        if (mode === "edit") {
+            // Lấy dữ liệu từ các thuộc tính của nút "SỬA"
+            data = {
+                id: button.getAttribute("data-id"),
+                name: button.getAttribute("data-name"),
+                description: button.getAttribute("data-description"),
+                price: button.getAttribute("data-price"),
+                email: button.getAttribute("data-email"),
+                phone: button.getAttribute("data-phone")
+            };
+        }
+
+        // Kiểm tra tab hiện tại và hiển thị form với dữ liệu tương ứng
+        if (tabId === "tab1") {
+            // Form dành cho "KHÓA HỌC"
+            addForm.innerHTML = `
+                <div class="mb-3">
+                    <label for="courseId" class="form-label">ID Khóa học</label>
+                    <input type="text" class="form-control" id="courseId" name="courseId" value="${data.id || ''}" ${mode === "edit" ? "readonly" : ""}>
+                </div>
+                <div class="mb-3">
+                    <label for="courseName" class="form-label">Tên Khóa học</label>
+                    <input type="text" class="form-control" id="courseName" name="courseName" value="${data.name || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="courseDescription" class="form-label">Mô Tả</label>
+                    <textarea class="form-control" id="courseDescription" name="courseDescription">${data.description || ''}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="coursePrice" class="form-label">Giá Khóa học</label>
+                    <input type="text" class="form-control" id="coursePrice" name="coursePrice" value="${data.price || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="courseImage" class="form-label">Ảnh Khóa học</label>
+                    <input type="file" class="form-control" id="courseImage" name="courseImage">
+                </div>
+            `;
+        } else if (tabId === "tab2") {
+            // Form dành cho "HỌC VIÊN"
+            addForm.innerHTML = `
+                <div class="mb-3">
+                    <label for="studentId" class="form-label">ID Học viên</label>
+                    <input type="text" class="form-control" id="studentId" name="studentId" value="${data.id || ''}" ${mode === "edit" ? "readonly" : ""}>
+                </div>
+                <div class="mb-3">
+                    <label for="studentName" class="form-label">Họ và Tên</label>
+                    <input type="text" class="form-control" id="studentName" name="studentName" value="${data.name || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="studentEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="studentEmail" name="studentEmail" value="${data.email || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="studentPhone" class="form-label">SĐT</label>
+                    <input type="text" class="form-control" id="studentPhone" name="studentPhone" value="${data.phone || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="studentImage" class="form-label">Ảnh Học viên</label>
+                    <input type="file" class="form-control" id="studentImage" name="studentImage">
+                </div>
+            `;
+        } else if (tabId === "tab3") {
+            // Form dành cho "GIẢNG VIÊN"
+            addForm.innerHTML = `
+                <div class="mb-3">
+                    <label for="teacherId" class="form-label">ID Giảng viên</label>
+                    <input type="text" class="form-control" id="teacherId" name="teacherId" value="${data.id || ''}" ${mode === "edit" ? "readonly" : ""}>
+                </div>
+                <div class="mb-3">
+                    <label for="teacherName" class="form-label">Họ và Tên</label>
+                    <input type="text" class="form-control" id="teacherName" name="teacherName" value="${data.name || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="teacherEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="teacherEmail" name="teacherEmail" value="${data.email || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="teacherPhone" class="form-label">SĐT</label>
+                    <input type="text" class="form-control" id="teacherPhone" name="teacherPhone" value="${data.phone || ''}">
+                </div>
+                <div class="mb-3">
+                    <label for="teacherImage" class="form-label">Ảnh Giảng viên</label>
+                    <input type="file" class="form-control" id="teacherImage" name="teacherImage">
+                </div>
+            `;
+        }
+
+        // Hiển thị modal
+        const addModal = new bootstrap.Modal(document.getElementById("addModal"));
+        addModal.show();
+    }
+});

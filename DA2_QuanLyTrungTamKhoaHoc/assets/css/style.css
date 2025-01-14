@@ -1,0 +1,296 @@
+
+/* carousel */
+#section-carousel{
+    padding: 50px 0 0 0;
+}
+
+#section-carousel .carousel-inner{
+    height: 500px;
+    border-radius: 30px;
+}
+
+.carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-action{
+    border-radius: 100px;
+}
+
+#prev,
+#next{
+    padding: 10px 15px;
+    background: #302F2E;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/* section-about */
+#section-about{
+    height: max-content;
+}
+.text-orange {
+    color: #f87629; /* Màu chữ cam */
+    letter-spacing: 3px;
+    font-family: "Rubik", sans-serif;
+}
+
+h1 {
+    font-size: 36px; /* Kích thước chữ cho h1 */
+    margin-bottom: 10px; /* Khoảng cách dưới h1 */
+}
+
+h2 {
+    margin-top: 0; /* Không có khoảng cách trên h2 */
+}
+.col-6 p{
+    letter-spacing: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Hoặc 3 tùy theo số dòng bạn muốn */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+/* section-marque */
+#section-marque1,
+#section-marque{
+    height: 60px;
+    background-color: #302F2E;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden; /* Ẩn phần không hiển thị */
+    position: relative;
+}
+
+.inner {
+    display: flex;
+    animation: marquee 15s linear infinite; /* Thay đổi 15s để điều chỉnh tốc độ */
+}
+#section-marque1,
+#section-marque .item{
+    font-weight: 700;
+    padding: 10px;
+    color: #A3A3A3;
+}
+
+
+/* section-tab */
+#section-tab{
+    padding: 50px 0;
+}
+
+#section-tab .inner .col-4 img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.7); /* Bắt đầu từ tỷ lệ 0.7 */
+    }
+    to {
+        transform: scale(1); /* Kết thúc tại tỷ lệ 1 */
+    }
+}
+
+/* Khi tab được kích hoạt, áp dụng animation */
+.tab-pane.show.active {
+    animation: scaleUp 0.3s ease forwards;
+}
+
+.text-head h1{
+    color: #302F2E;
+}
+
+.card-text,
+.text-head p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+
+#myTab{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.tab-control{
+    height: 180px;
+    width: 100%;
+    color: #302F2E;
+    background-color: #ebebeb;
+}
+
+.tab-control.active{
+    color: #fff;
+    background-color: #302F2E;
+}
+
+.tab-control.active .title span{
+    background-color: #f87629;
+    color: #fff;
+}
+
+.tab-control .title span{
+    width: 55px;
+    padding: 10px;
+    color: #fff;
+    background-color: #302F2E;
+    border-radius: 50%;
+}
+
+.tab-control .title .text{
+    width: 100%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    letter-spacing: 2px;
+}
+
+.content{
+    text-align: justify;
+}
+
+.content p{
+    font-size: 0.9rem;
+}
+
+/* section-product */
+
+#section-product{
+    padding: 50px 0;
+    /* background-color: #e9e2e2; */
+}
+
+#section-product .row-title p{
+    text-align: center;
+}
+
+.card{
+    height: 370px;
+    border: none;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+}
+
+.card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card-text{
+    font-size: 0.9rem;
+}
+
+.btn-buy{
+    background-color: #f87629;
+    font-size: 0.9rem;
+}
+
+.btn-see{
+    background-color: #302F2E;
+}
+
+.btn-buy:hover{
+    background-color: #fb9960;
+    font-size: 0.9rem;
+}
+
+.btn-see:hover{
+    background-color: #5d5d5c;
+}
+
+.card-price{
+    font-size: small;
+    color: #f87629;
+}
+.card-body{
+    background-color: #ebebeb;
+}
+
+.page-link{
+    background-color: #5d5d5c;
+}
+
+.page-link:hover{
+    background-color: #838383;
+}
+
+.page-link.active{
+    background-color: #f87629;
+}
+
+/* section-footer */
+.bg {
+    width: 100%;
+    height: 200px;
+}
+
+.contact{
+    transform: translateY(50px);
+}
+
+.contact .container {
+    height: 300px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.btn-Sub{
+    background-color: #f87629;
+}
+
+.btn-Sub:hover{
+    background-color: #f87629;
+}
+
+input::placeholder{
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 0.1rem #fb9960;
+    border: none;
+}
+
+/* footer */
+footer {
+    height: 50px;
+    background-color: #292929;
+}
+
+footer .col{
+    letter-spacing: 2px;
+}
+
+.totop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.totop:hover{
+    opacity: 1;
+}

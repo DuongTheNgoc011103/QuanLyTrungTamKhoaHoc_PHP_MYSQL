@@ -1,0 +1,75 @@
+body {
+    background-image: url(../../assets/images/banner_edit/5.png);
+    background-size: cover;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.lophoc,
+.khoahoc {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.giangvien {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.giangvien-img {
+    height: 150px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info_giangvien {
+    font-size: 1rem;
+}
+
+.tengv {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.table-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.table-container tbody {
+    display: block;
+    max-height: 50vh; /* Đặt chiều cao tối đa cho tbody */
+    overflow-y: auto; /* Cho phép cuộn dọc khi nội dung vượt quá chiều cao */
+    width: 100%;
+}
+
+.table-container thead,
+.table-container tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Giúp các cột có cùng chiều rộng */
+}
+
+.table-container thead th {
+    text-align: center;
+}
+
+input[type="text"] {
+    max-width: 100%; /* Đảm bảo input không vượt quá giới hạn cột */
+    text-align: center; /* Căn giữa nội dung trong ô */
+}

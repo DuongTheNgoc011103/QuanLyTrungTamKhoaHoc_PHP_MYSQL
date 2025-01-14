@@ -1,0 +1,183 @@
+#banner{
+    width: 100%;
+    height: 450px;
+}
+
+#banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#banner .content{
+    transform: translate(-50%, -70%)!important;
+    width: 65%;
+    background-color: rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+/* action-data */
+.icon-action,
+.btn-search{
+    background-color: #f87629;
+    font-size: 0.9rem;
+}
+
+.icon-action:hover,
+.btn-search:hover{
+    background-color: #fb9960;
+    font-size: 0.9rem;
+}
+
+::placeholder{
+    font-style: italic;
+}
+
+.form-select:focus,
+.form-control:focus{
+    box-shadow: none !important;
+}
+
+.form-select,
+.form-control{
+    border: 1px solid #f87629;
+}
+
+option{
+    background-color: #5896f3;
+    color: #ffffff;
+}
+
+.icon-close{
+    background-color: #5d5d5c;
+    font-size: 0.9rem;
+}
+
+.icon-close:hover{
+    background-color: #f87629;
+    font-size: 0.9rem;
+}
+
+
+/* section-content */
+
+.section-content{
+    padding: 40px;
+}
+
+.row .search{
+    padding-right: 0px!important;
+}
+
+.group .title{
+    background-color: #f87629;
+}
+
+.group .list-group li{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.group .list-group .list-group-item:hover > a{
+    color: #f87629!important;
+}
+
+.inner-list{
+    background-color: transparent !important;
+}
+
+.accordion-button{
+    background-color: transparent !important;
+    padding: 0;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #f87629;
+    background-color: transparent !important; 
+    outline: none !important;
+}
+
+
+.card{
+    height: 370px;
+    border: none;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+}
+
+.card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card-text{
+    font-size: 0.9rem;
+}
+
+.btn-buy{
+    background-color: #f87629;
+    font-size: 0.9rem;
+}
+
+.btn-see{
+    background-color: #302F2E;
+}
+
+.btn-buy:hover{
+    background-color: #fb9960;
+    font-size: 0.9rem;
+}
+
+.btn-see:hover{
+    background-color: #5d5d5c;
+}
+
+.card-price{
+    font-size: small;
+    color: #f87629;
+}
+.card-body{
+    background-color: #ebebeb;
+}
+
+.page-link{
+    background-color: #5d5d5c;
+}
+
+.page-link:hover{
+    background-color: #838383;
+}
+
+.page-link.active{
+    background-color: #f87629;
+}
+
+.totop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.totop:hover{
+    opacity: 1;
+}
+
+#section-footer{
+    height: 130px;
+}
+
+.bg-dark{
+    width: 100%;
+    height: 80px;
+}
+
+.bg-sight{
+    width: 100%;
+    height: 50px;
+}
+
+.bg-sight{
+    background-color: #5d5d5c;
+}
